@@ -23,7 +23,6 @@ along with evo.  If not, see <http://www.gnu.org/licenses/>.
 
 import argparse
 import logging
-import typing
 
 import numpy as np
 
@@ -55,8 +54,8 @@ def rpe(
     ref_name: str = "reference",
     est_name: str = "estimate",
     support_loop: bool = False,
-    change_unit: typing.Optional[metrics.Unit] = None,
-    project_to_plane: typing.Optional[Plane] = None,
+    change_unit: metrics.Unit | None = None,
+    project_to_plane: Plane | None = None,
 ) -> Result:
 
     # Align the trajectories.

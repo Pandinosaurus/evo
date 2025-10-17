@@ -19,8 +19,6 @@ You should have received a copy of the GNU General Public License
 along with evo.  If not, see <http://www.gnu.org/licenses/>.
 """
 
-import typing
-
 import numpy as np
 import scipy.spatial.transform as sst
 from packaging.version import Version
@@ -206,7 +204,7 @@ def is_se3(p: np.ndarray) -> bool:
     return rot_valid and bool(lower_valid)
 
 
-def is_sim3(p: np.ndarray, s: typing.Optional[float] = None) -> bool:
+def is_sim3(p: np.ndarray, s: float | None = None) -> bool:
     """
     :param p: a 4x4 matrix
     :param s: expected scale factor (determined via sim3_scale() if not given)
